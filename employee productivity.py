@@ -117,7 +117,7 @@ tf.keras.utils.plot_model(model, show_shapes=True)
 
 #%%
 #9. Compile and train the model
-base_log_path = r"C:\Users\asus\Documents\tensorflow\GitHub\Project-2-Productivity-Production-of-Garment-Employees-Dataset\tb_logs"
+base_log_path = r"C:\Users\asus\Documents\tensorflow\GitHub\Employee-productivity-prediction\tb_logs"
 log_path= os.path.join(base_log_path, datetime.datetime.now().strftime('%Y%m%d-%H%M%S') + '__Project_2')
 tb = TensorBoard(log_dir=log_path)
 es = EarlyStopping(monitor='val_loss', patience=200, verbose=2)
@@ -141,7 +141,7 @@ plt.plot(predictions,labels,".")
 plt.xlabel("Predictions")
 plt.ylabel("Labels")
 plt.title("Graph of Predictions vs Labels with Test Data")
-save_path = r"C:\Users\asus\Documents\tensorflow\GitHub\Project-2-Productivity-Production-of-Garment-Employees-Dataset"
+save_path = r"C:\Users\asus\Documents\tensorflow\GitHub\Employee-productivity-prediction"
 plt.savefig(os.path.join(save_path,"result.png"),bbox_inches='tight')
 plt.show()
 #%%
